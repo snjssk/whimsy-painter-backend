@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"context"
+	"fmt"
+
+	"github.com/snjssk/whimsy-painter-backend/app/models"
+)
 
 func main()  {
-	fmt.Println("main")
+	ctx := context.Background()
+	result := models.GetItem(ctx)
+	fmt.Println("main", result)
 }
